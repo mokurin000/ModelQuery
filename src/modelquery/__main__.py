@@ -19,18 +19,22 @@ font_style = ("Microsoft Yahei", 20)
 frame = ttk.Frame(app, padding="10")
 
 # 标签和输入框
+title_model = ttk.Entry(frame, font=font_style)
+title_model.grid(row=0, column=1, padx=10, pady=10, sticky="ew")
+
+# 标签和输入框
 label_model = ttk.Label(frame, text="手机型号：", font=font_style)
-label_model.grid(row=0, column=0, padx=10, pady=10, sticky="e")
+label_model.grid(row=1, column=0, padx=10, pady=10, sticky="e")
 
 entry_model = ttk.Entry(frame, font=font_style)
-entry_model.grid(row=0, column=1, padx=10, pady=10, sticky="ew")
+entry_model.grid(row=1, column=1, padx=10, pady=10, sticky="ew")
 
 label_config = ttk.Label(frame, text="推荐配置：", font=font_style)
-label_config.grid(row=1, column=0, padx=10, pady=10, sticky="e")
+label_config.grid(row=2, column=0, padx=10, pady=10, sticky="e")
 
 # 使用不可编辑的 Entry 以保持一致的高度
 text_config = ttk.Entry(frame, font=font_style, state="readonly")
-text_config.grid(row=1, column=1, padx=10, pady=10, sticky="ew")
+text_config.grid(row=2, column=1, padx=10, pady=10, sticky="ew")
 
 # 使entry和text宽度一致
 frame.grid_columnconfigure(1, weight=1)
